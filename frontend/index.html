@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOON Network Token Creator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Create Your Token on the SOON Network</h1>
+  
+  <!-- Token Creation Form -->
+  <form id="tokenForm" enctype="multipart/form-data">
+    <label for="tokenName">Token Name:</label>
+    <input type="text" id="tokenName" name="tokenName" required>
+
+    <label for="decimals">Decimals:</label>
+    <input type="number" id="decimals" name="decimals" value="6" min="0" max="18" required>
+
+    <label for="symbol">Symbol:</label>
+    <input type="text" id="symbol" name="symbol" required>
+
+    <label for="supply">Supply:</label>
+    <input type="number" id="supply" name="supply" value="1" min="1" required>
+
+    <label for="image">Logo Image:</label>
+    <input type="file" id="image" name="image" accept="image/*" required>
+    <p>Most meme coins use a squared 1000x1000 logo</p>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea>
+
+    <h3>Add Social Links</h3>
+
+    <label for="website">Website:</label>
+    <input type="url" id="website" name="website">
+
+    <label for="twitter">Twitter:</label>
+    <input type="url" id="twitter" name="twitter">
+
+    <label for="telegram">Telegram:</label>
+    <input type="url" id="telegram" name="telegram">
+
+    <label for="discord">Discord:</label>
+    <input type="url" id="discord" name="discord">
+
+    <button type="submit">Create Token</button>
+  </form>
+
+  <h2>Existing Tokens</h2>
+  <div id="tokenList">
+    <!-- Tokens will be displayed here -->
+  </div>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>
